@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"controller"},{"l":"DBconnect"},{"l":"Lambda"},{"l":"Main"},{"l":"model"}];updateSearchResults();

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsForm">
+   <children>
+      <TableView fx:id="apptTableView" layoutX="14.0" layoutY="24.0" prefHeight="318.0" prefWidth="818.0">
+        <columns>
+          <TableColumn fx:id="apptIDCol" prefWidth="53.60000801086426" text="Appt ID" />
+          <TableColumn fx:id="apptTitleCol" prefWidth="105.59996795654297" text="Appt Title" />
+            <TableColumn fx:id="descCol" prefWidth="118.4000244140625" text="Description" />
+            <TableColumn fx:id="contactCol" prefWidth="80.79998779296875" text="Contact" />
+            <TableColumn fx:id="locationCol" prefWidth="113.60003662109375" text="Location" />
+            <TableColumn fx:id="typeCol" prefWidth="95.19998168945312" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="59.199951171875" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="56.0" text="End" />
+            <TableColumn fx:id="custIDCol" prefWidth="85.59991455078125" text="Customer ID" />
+            <TableColumn fx:id="userIDCol" prefWidth="54.4000244140625" text="User ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="717.0" layoutY="424.0" mnemonicParsing="false" onAction="#deleteButtonAction" text="Delete" />
+      <Button fx:id="updateButton" layoutX="714.0" layoutY="391.0" mnemonicParsing="false" onAction="#updateButtonAction" text="Update" />
+      <Button fx:id="addButton" layoutX="723.0" layoutY="358.0" mnemonicParsing="false" onAction="#addButtonAction" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="optionsMenuButton" layoutX="391.0" layoutY="404.0" mnemonicParsing="false" onAction="#optionsMenuAction" text="Options Menu" />
+      <Label layoutX="22.0" layoutY="395.0" text="Appointment Viewing:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="189.0" layoutY="362.0" mnemonicParsing="false" onAction="#allRadioButton" selected="true" text="All">
+         <toggleGroup>
+            <ToggleGroup fx:id="apptView" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="189.0" layoutY="395.0" mnemonicParsing="false" onAction="#monthRadioButton" text="Month" toggleGroup="$apptView" />
+      <RadioButton layoutX="189.0" layoutY="428.0" mnemonicParsing="false" onAction="#weekRadioButton" text="Week" toggleGroup="$apptView" />
+   </children>
+</AnchorPane>

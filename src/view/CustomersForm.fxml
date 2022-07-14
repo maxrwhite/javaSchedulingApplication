@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="customersForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerForm">
+   <children>
+      <Button fx:id="optionsMenuButton" layoutX="254.0" layoutY="353.0" mnemonicParsing="false" onAction="#optionsMenu" text="Options Menu" />
+      <TableView fx:id="TableViewCustomers" layoutX="37.0" layoutY="73.0" prefHeight="200.0" prefWidth="521.0">
+        <columns>
+          <TableColumn fx:id="custIDCol" prefWidth="75.0" text="Customer ID" />
+          <TableColumn fx:id="custNameCol" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="custStreetCol" prefWidth="75.0" text="Street" />
+            <TableColumn fx:id="custCityStateCol" prefWidth="75.0" text="State/Providence" />
+            <TableColumn fx:id="custCountryCol" prefWidth="75.0" text="Country" />
+            <TableColumn fx:id="custZipCodeCol" prefWidth="75.0" text="Zip Code" />
+            <TableColumn fx:id="custPhoneCol" prefWidth="75.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="37.0" layoutY="289.0" mnemonicParsing="false" onAction="#addCustomerAction" prefHeight="26.0" prefWidth="55.0" text="Add" />
+      <Button fx:id="updateButton" layoutX="37.0" layoutY="328.0" mnemonicParsing="false" onAction="#updateCustomerAction" text="Update" />
+      <Button fx:id="deleteButton" layoutX="37.0" layoutY="366.0" mnemonicParsing="false" onAction="#deleteCustomerAction" prefHeight="26.0" prefWidth="55.0" text="Delete" />
+   </children>
+</AnchorPane>
